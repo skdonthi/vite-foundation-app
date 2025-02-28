@@ -1,0 +1,25 @@
+
+/*==============================================
+=            Mixin Background Asset            =
+==============================================*/
+
+@mixin mx-background-asset($asset-path, $asset-name){
+
+    background: url($asset-path + '#{$asset-name}.svg') no-repeat;
+    //background: url($asset-path + '#{$asset-name}.svg'), linear-gradient(transparent, transparent) ;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size:  contain;
+
+    // CSS for high-resolution displays only
+    @include breakpoint(retina){
+
+        background: url($asset-path + '#{$asset-name}.svg') no-repeat;
+        //background: url($asset-path + '#{$asset-name}.svg'), linear-gradient(transparent, transparent) ;
+        background-position: 50% 0%;
+        background-repeat: no-repeat;
+        background-size:  contain;
+    }
+}
+
+/*=====  End of Mixin Background Asset  ======*/

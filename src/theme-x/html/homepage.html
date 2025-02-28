@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>iCafe</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="bg-homepage">
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <!--=====================================
+=            HEADER            =
+======================================-->
+
+    <div class="page-contents">
+      <div class="module-header --large-header margin-bottom-3">
+        <div class="row">
+          <!-- <div
+          class="columns medium-offset-1 small-3 medium-3"
+          id="wrapper-back"
+          style="visibility: hidden"
+        >
+          <a href="#"><div></div></a>
+        </div> -->
+
+          <div
+            class="columns small-12 medium-8 large-5 small-centered medium-centered large-centered"
+            id="wrapper-logo"
+          >
+            <div class="homepage-image"></div>
+          </div>
+
+          <!-- <div
+          class="columns medium-pull-1 small-3 medium-4"
+          id="wrapper-login"
+          style="visibility: hidden"
+        >
+          <button
+            id="languages_button"
+            type="button"
+            onclick="handleLanguageClick(event)"
+          >
+            <span class="languages-label">English</span
+            ><span class="icon icon-globe languages-icon"></span>
+          </button>
+        </div> -->
+        </div>
+      </div>
+
+      <div class="margin-bottom-3">&nbsp;</div>
+      <div class="margin-bottom-3">&nbsp;</div>
+      <div class="margin-bottom-3">&nbsp;</div>
+      <div class="padding-top-1">&nbsp;</div>
+
+      <div
+        class="columns small-12 medium-6 large-4 small-centered medium-centered large-centered margin-top-3 text-center margin-bottom-3"
+      >
+        <h1 class="homepage-text">GET CONNECTED</h1>
+      </div>
+
+      <div class="row margin-bottom-3">
+        <div
+          class="small-11 medium-5 large-4 small-centered medium-centered large-centered"
+        >
+          <div class="checkbox-container homepage-text">
+            <input type="checkbox" id="terms" class="checkbox" />
+            <p for="terms">
+              I agree to the
+              <a href="#" class="normal-link homepage-text">Terms of Service</a>
+              and
+              <br />
+              <a href="#" class="normal-link homepage-text">Privacy Policy</a>.
+            </p>
+          </div>
+          <h5
+            id="tos-validation-error"
+            class="homepage-text"
+            style="display: none; padding: 10px 0"
+          >
+            You must agree to the Terms and conditions before continuing
+          </h5>
+          <a class="button button-homepage" id="confirm-btn" href="#"
+            >Continue</a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/bundle.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("confirm-btn")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default action of the anchor tag
+
+            const checkbox = document.getElementById("terms");
+            const errorMessage = document.getElementById(
+              "tos-validation-error"
+            );
+
+            if (!checkbox.checked) {
+              errorMessage.style.display = "block";
+            } else {
+              errorMessage.style.display = "none";
+              // Replace with actual form submission logic
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

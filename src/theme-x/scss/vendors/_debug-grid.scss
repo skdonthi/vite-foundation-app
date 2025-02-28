@@ -1,0 +1,40 @@
+@mixin debugging-grid($borders: false) {
+  * {
+    background-color: rgba(255, 0, 0, .2);
+  }
+  * * {
+    background-color: rgba(0, 255, 0, .2);
+  }
+  * * * {
+    background-color: rgba(0, 0, 255, .2);
+  }
+  * * * * {
+    background-color: rgba(255, 0, 255, .2);
+  }
+  * * * * * {
+    background-color: rgba(0, 255, 255, .2);
+  }
+  * * * * * * {
+    background-color: rgba(255, 255, 0, .2);
+  }
+  * * * * * * * {
+    background-color: rgba(255, 0, 0, .2);
+  }
+  * * * * * * * * {
+    background-color: rgba(0, 255, 0, .2);
+  }
+  * * * * * * * * * {
+    background-color: rgba(0, 0, 255, .2);
+  }
+
+
+  @if $borders == true {
+
+    * {
+      box-shadow: 0 0 0 1px red;
+    }
+
+  }
+
+}
+

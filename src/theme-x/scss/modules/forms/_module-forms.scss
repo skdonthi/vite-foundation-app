@@ -1,0 +1,84 @@
+@use "sass:color";
+
+$highlight-color: #8c8c8c;
+
+.form-floating-label {
+  position: relative;
+
+  [type="text"],
+  [type="password"],
+  [type="date"],
+  [type="datetime"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="week"],
+  [type="email"],
+  [type="number"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="url"],
+  [type="color"],
+  textarea {
+    margin-bottom: 0;
+    color: $color-label;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $font-family-body;
+    padding: 30px 1rem 1rem 25px;
+    outline: none;
+  }
+
+  select {
+    margin-bottom: 0;
+    color: $color-label;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $font-family-body;
+    padding: 15px 25px 5px 25px;
+    outline: none;
+  }
+
+  label {
+    color: #6e6e6e;
+    font-size: 18px;
+    position: absolute;
+    pointer-events: none;
+    left: 25px;
+    bottom: 10px;
+    outline: none;
+    transition: all 0.2s ease-in;
+    font-weight: 400;
+  }
+
+  textarea ~ label {
+    top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  /* active state */
+  input:focus ~ label,
+  input:disabled[value] ~ label,
+  &.has-value input ~ label,
+  select:focus ~ label,
+  &.has-value select ~ label {
+    top: 0;
+    font-size: 14px;
+    color: $highlight-color;
+    font-weight: 400;
+    outline: none;
+  }
+
+  textarea:focus ~ label,
+  &.has-value textarea ~ label {
+    top: 0;
+    font-size: 14px;
+    color: $highlight-color;
+    font-weight: 400;
+  }
+
+  select option[disabled] {
+    color: color.adjust($color-label, $lightness: 20%);
+  }
+}

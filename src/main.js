@@ -6,6 +6,24 @@ import foundationSitesLogo from '/foundation-sites.png'
 import htmlLogo from '/html5.svg'
 import cssLogo from '/css3.svg'
 import sassLogo from '/sass.svg'
+import 'foundation-sites'
+import $ from 'jquery';
+
+window.$ = $;
+
+window.addEventListener('load', (event) => {
+  initPage();
+});
+
+window.addEventListener('turbo:render', (event) => {
+  initPage();
+});
+
+function initPage() {
+  $(document).foundation();
+  console.log('foundation ready');
+}
+
 
 document.querySelector('#app').innerHTML = `
   <div>

@@ -1,0 +1,56 @@
+@import "../../settings/settings-x";
+
+.social-media {
+  width: $social-media-size;
+  height: $social-media-size;
+  margin: 0 auto;
+
+  &.whatsapp {
+    background: url($PATH-ASSET-SOCIAL + "whatsapp.png") no-repeat;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &.facebook {
+    background: url($PATH-ASSET-SOCIAL + "facebook.png") no-repeat;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &.messenger {
+    background: url($PATH-ASSET-SOCIAL + "messenger.png") no-repeat;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &.linkedin {
+    background: url($PATH-ASSET-SOCIAL + "linkedin.png") no-repeat;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &.twitter {
+    background: url($PATH-ASSET-SOCIAL + "twitter.png") no-repeat;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &.instagram {
+    background: url($PATH-ASSET-SOCIAL + "instagram.png") no-repeat;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &.snapchat {
+    background: url($PATH-ASSET-SOCIAL + "snapchat.png") no-repeat;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &.pinterest {
+    background: url($PATH-ASSET-SOCIAL + "pinterest.png") no-repeat;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

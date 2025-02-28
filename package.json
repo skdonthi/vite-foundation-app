@@ -6,12 +6,25 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:x": "cross-env THEME=theme-x vite build",
+    "dev:x": "cross-env THEME=theme-x vite"
   },
   "devDependencies": {
-    "vite": "^6.2.0"
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.0.6",
+    "fs": "^0.0.1-security",
+    "glob": "^11.0.1",
+    "path": "^0.12.7",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "1.32.13",
+    "vite": "^6.2.0",
+    "vite-plugin-html": "^3.2.2"
   },
   "dependencies": {
-    "foundation-sites": "^6.9.0"
+    "foundation-sites": "^6.9.0",
+    "jquery": "^3.7.1"
   }
 }

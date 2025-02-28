@@ -1,0 +1,177 @@
+@use "../../settings/settings-x" as *;
+@import "foundation-sites/scss/util/util";
+@import "foundation-sites/scss/global";
+@import "foundation-sites/scss/prototype/prototype";
+
+/*=====================================
+=            Module Header            =
+=====================================*/
+
+.module-header {
+  height: rem-calc($module-header-height);
+  font-size: 10px;
+
+  @include breakpoint(small down) {
+    height: rem-calc($module-header-height-mobile);
+  }
+
+  #wrapper-login {
+    position: relative;
+    margin: 0 auto;
+    top: 35px;
+    right: 24px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575px) {
+    #wrapper-login {
+      right: 30px;
+      left: auto;
+    }
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767px) {
+    #wrapper-login {
+      right: 20px;
+      left: auto;
+    }
+  }
+
+  /* Medium devices (tablets, 768px to 969px) */
+  @media (min-width: 768px) and (max-width: 969px) {
+    #wrapper-login {
+      right: 0;
+      left: 0;
+    }
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 970px) and (max-width: 1024px) {
+    #wrapper-login {
+      right: 0;
+      left: -40px;
+    }
+  }
+
+  /* Large devices (laptops, 1025px and up) */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    #wrapper-login {
+      right: auto;
+      left: -40px;
+    }
+  }
+
+  /* Extra large devices (desktops, monitors, 1441px and up) */
+  @media (min-width: 1441px) and (max-width: 1920px) {
+    #wrapper-login {
+      right: auto;
+      left: -45px;
+    }
+  }
+
+  /* Ultra-wide devices (large monitors, 1921px and up) */
+  @media (min-width: 1921px) {
+    #wrapper-login {
+      right: auto;
+      left: -50px;
+    }
+  }
+
+  #wrapper-logo {
+    position: relative;
+    //text-align: center;
+    top: $module-back-button-space-to-top/2;
+  }
+
+  #wrapper-back div {
+    position: relative;
+    height: rem-calc($module-back-button-height);
+    width: rem-calc($module-back-button-width);
+    margin: 0 auto;
+    //background: url($PATH-ASSET-BACK + $module-back-button-name);
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M20%2011H7.83L13.415%205.415L12%204L4%2012L12%2020L13.415%2018.585L7.83%2013H20V11Z%22%20fill%3D%22%234A4A4A%22/%3E%3C/svg%3E");
+    background-size: contain;
+    top: $module-back-button-space-to-top;
+  }
+
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575px) {
+    #wrapper-back div {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767px) {
+    #wrapper-back div {
+      right: 20px;
+      left: auto;
+    }
+  }
+
+  /* Medium devices (tablets, 768px to 969px) */
+  @media (min-width: 768px) and (max-width: 969px) {
+    #wrapper-back div {
+      right: 0;
+      left: -20px;
+    }
+  }
+
+  /* Special case: 970px to 1024px */
+  @media (min-width: 970px) and (max-width: 1024px) {
+    #wrapper-back div {
+      right: auto;
+      left: 40px;
+    }
+  }
+
+  /* Large devices (laptops, 1025px and up) */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    #wrapper-back div {
+      right: auto;
+      left: 50px;
+    }
+  }
+
+  /* Extra large devices (desktops, monitors, 1441px and up) */
+  @media (min-width: 1441px) and (max-width: 1920px) {
+    #wrapper-back div {
+      right: auto;
+      left: 50px;
+    }
+  }
+
+  /* Ultra-wide devices (large monitors, 1921px and up) */
+  @media (min-width: 1921px) {
+    #wrapper-back div {
+      right: auto;
+      left: 50px;
+    }
+  }
+
+  @include breakpoint(large) {
+    @include margin-direction("bottom", 2);
+  }
+
+  &.--large-header {
+    height: rem-calc(200px);
+    margin-top: rem-calc(50px);
+
+    .module-logo {
+      height: rem-calc(200px);
+    }
+  }
+}
+
+.page-title {
+  p {
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+/*=====  End of Module Header  ======*/

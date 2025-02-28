@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>iCafe</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+
+  <script type="text/javascript" src="scripts/libs/jquery/jquery.js"></script>
+  <script type="text/javascript" src="scripts/functions.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="module-header">
+    <div class="row">
+      <div class="columns small-12 medium-4 large-4 small-centered medium-centered large-centered" id="wrapper-logo">
+        <div class="logo"></div>
+      </div>
+    </div>
+  </div>
+  <!-- /HEADER -->
+
+  <!-- MAIN CONTENT AREA - WITHOUT BG -->
+  <div class="page-contents dark-page-contents">
+    <div class="row">
+      <div class="columns small-12 medium-10 large-6 small-centered">
+        <div id="ContentNoBackground_pnlRegister">
+          <!--pnlRegister-->
+          <div class="row">
+            <div class="columns small-12 margin-bottom-3 text-center">
+              <h1>Register</h1>
+            </div>
+          </div>
+          <div class="row margin-bottom-2">
+            <div class="columns small-12">
+              <div class="text-center">
+                Already registered?
+                <a class="for-dark-bg" href="">Login In!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="enumeration-wrapper"></div>
+
+          <p class="show-validation-error text-center" style="visibility: hidden">
+            <span class="error-dot margin-right-1"></span>The credentials you
+            entered are not correct
+          </p>
+
+          <div class="input-wrapper">
+            <div class="row">
+              <div class="columns small-12 medium-8 large-12 small-centered medium-centered large-centered">
+                <div class="column small-12">
+                  <div class="input-with-error">
+                    <span class="validation-error" style="visibility: hidden">*</span>
+                    <input type="text" placeholder="First Name" />
+                  </div>
+                </div>
+
+                <div class="column small-12">
+                  <div class="input-with-error">
+                    <span class="validation-error" style="visibility: hidden">*</span>
+                    <input type="text" placeholder="Last Name" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="columns small-12 medium-8 large-12 small-centered medium-centered large-centered">
+                <div class="column small-12">
+                  <div class="input-set input-with-error">
+                    <span class="validation-error" style="visibility: hidden">*</span>
+                    <input type="text" class="folio" placeholder="Cabin Number" />
+                  </div>
+                </div>
+
+                <div class="column small-12">
+                  <div class="padding-left-2">
+                    <span class="registration-help-text">Date of birth <span
+                        class="padding-left-1 validation-message visible" id="dob-validation-message"></span></span>
+
+                  </div>
+                  <div class="input-set input-with-error">
+                    <div style="display: flex; gap: 5px">
+                      <div class="small-4">
+                        <select id="month" name="month" required>
+                          <option value="" selected>Month</option>
+                          <option class="floating-input" value="01">Jan</option>
+                          <option class="floating-input" value="02">Feb</option>
+                          <option class="floating-input" value="03">Mar</option>
+                          <option class="floating-input" value="04">Apr</option>
+                          <option class="floating-input" value="05">May</option>
+                          <option class="floating-input" value="06">Jun</option>
+                          <option class="floating-input" value="07">Jul</option>
+                          <option class="floating-input" value="08">Aug</option>
+                          <option class="floating-input" value="09">Sep</option>
+                          <option class="floating-input" value="10">Oct</option>
+                          <option class="floating-input" value="11">Nov</option>
+                          <option class="floating-input" value="12">Dec</option>
+                        </select>
+                      </div>
+                      <div class="small-4">
+                        <input type="text" placeholder="Day" id="day" maxlength="2" required />
+                      </div>
+                      <div class="small-4">
+                        <input type="text" placeholder="Year" id="year" maxlength="4" required />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="columns small-12 large-12 medium-8 small-centered medium-centered large-centered">
+              <div class="column small-12">
+                <div class="padding-left-2">
+                  <span class="registration-help-text">Min 8 characters, no special characters</span>
+                </div>
+                <div class="input-set input-with-error">
+                  <span class="validation-error" style="visibility: hidden">*</span>
+                  <input type="text" class="folio" placeholder="Username" />
+                </div>
+              </div>
+
+              <div class="column small-12">
+                <div class="padding-left-2">
+                  <span class="registration-help-text">PIN must be 4 digits</span>
+                </div>
+                <div class="input-set input-with-error">
+                  <span class="validation-error" style="visibility: hidden">*</span>
+                  <input type="password" class="folio" placeholder="PIN" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="columns small-12 large-12 medium-8 small-centered medium-centered large-centered">
+              <div class="column small-12">
+                <div class="input-set input-with-error">
+                  <span class="validation-error" style="visibility: hidden">*</span>
+                  <input type="password" class="folio" placeholder="Confirm PIN " />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="enumeration-wrapper"></div>
+
+          <!-- empty input set to fill up grid -->
+          <div class="input-set"></div>
+          <!-- Buttons -->
+          <div class="row">
+            <div id="register-btn"
+              class="columns small-11 large-6 medium-7 small-centered margin-bottom-1 text-center margin-top-1 padding-left-2 padding-right-2">
+              <input type="submit" value="Register" class="button button-primary" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="columns small-10 small-centered margin-bottom-1 text-center margin-top-1">
+              <p>
+                By registering you agree to the
+                <a class="for-dark-bg" href="">Terms and Conditions</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <input type="hidden" name="form" value="PanelRegister" />
+      </div>
+    </div>
+  </div>
+
+  <div class="row y-app margin-bottom-1">
+    <div class="columns small-8 small-offset-2 small-centered medium-centered large-centered text-center">
+      <h4 class="">Download the x App</h4>
+    </div>
+    <div class="row padding-bottom-3">
+      <div class="columns small-12 medium-4 large-4 small-centered medium-centered large-centered">
+        <div class="column large-6">
+          <div class="google-play-store-logo"></div>
+        </div>
+        <div class="column large-6">
+          <div class="app-store-logo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- /MAIN CONTENT AREA - WITHOUT BG -->
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".toggle-upgrade-options").click(function () {
+        $(".upgrade-options-panel").slideToggle();
+        $(".toggle-upgrade-options-caret").toggleClass(
+          "fa-caret-up fa-caret-down"
+        );
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function allowOnlyDigits(event, maxLength) {
+        const input = event.target;
+        const key = event.key;
+
+        // Prevent non-digit input
+        if (!/^[0-9]$/.test(key)) {
+          event.preventDefault();
+          return;
+        }
+
+        // Restrict length
+        if (input.value.length >= maxLength) {
+          event.preventDefault();
+        }
+      }
+
+      document.getElementById("day").addEventListener("keypress", function (event) {
+        allowOnlyDigits(event, 2);
+      });
+
+      const yearInput = document.getElementById("year").addEventListener("keypress", function (event) {
+        allowOnlyDigits(event, 4);
+      });
+
+    });
+    document
+      .getElementById("register-btn")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+
+        function isLeapYear(year) {
+          return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+        }
+
+        const month = document.getElementById("month");
+        const day = document.getElementById("day");
+        const year = document.getElementById("year");
+        const dobValidationMessage = document.getElementById(
+          "dob-validation-message"
+        );
+
+        let isDayValid = true;
+        let isMonthValid = true;
+        let isYearValid = true;
+        dobValidationMessage.textContent = ""; // Clear previous messages
+
+        // Remove 'error' class from all inputs
+        [month, day, year].forEach((input) =>
+          input.classList.remove("error")
+        );
+
+        if (!month.value) {
+          isMonthValid = false;
+          dobValidationMessage.textContent = "Please select a month.";
+        }
+
+        const yearValue = year.value.trim();
+        if (!yearValue || isNaN(yearValue) || yearValue.length !== 4) {
+          isYearValid = false;
+          dobValidationMessage.textContent =
+            "Please enter a valid 4-digit year.";
+        }
+
+        const dayValue = day.value.trim();
+        if (isNaN(dayValue) || dayValue < 1 || dayValue > 31) {
+          isDayValid = false;
+          dobValidationMessage.textContent = "Please enter a valid day (e.g. 1-31).";
+        }
+
+        if (!isDayValid && !isMonthValid && !isYearValid) {
+          dobValidationMessage.textContent =
+            "Please enter a valid date of birth.";
+          dobValidationMessage.style.visibility = "visible";
+          //[month, day, year].forEach((input) => input.classList.add("error"));
+        } else if (!isDayValid || !isMonthValid || !isYearValid) {
+          dobValidationMessage.style.visibility = "visible";
+        } else {
+          dobValidationMessage.style.visibility = "hidden";
+          [month, day, year].forEach((input) =>
+            input.classList.remove("error")
+          );
+        }
+      });
+  </script>
+
+  <script src="assets/js/bundle.js"></script>
+</body>
+
+</html>

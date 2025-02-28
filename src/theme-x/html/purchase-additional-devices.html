@@ -1,0 +1,103 @@
+@@include('header.html')
+
+<div class="page-contents">
+  <div class="row margin-top-3">
+    <div
+      class="columns small-12 medium-8 large-7 small-centered medium-centered large-centered padding-left-3 padding-right-3"
+    >
+      <div class="row">
+        <div
+          class="columns small-centered medium-centered large-centered text-center"
+        >
+          <h2 class="margin-bottom-3">Purchase additional devices</h2>
+          <p class="description margin-top-3" style="font-size: 16px">
+            You can currently use 2 devices per person in your cabin
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div
+          class="columns small-10 small-offset-1 small-centered medium-centered large-centered margin-bottom-1 margin-top-3 text-center"
+        >
+          <h4 class="margin-bottom-3">Add extra device(s)</h4>
+          <div
+            class="margin-bottom-3 margin-top-3"
+            style="display: flex; justify-content: center"
+          >
+            <div class="counter">
+              <button id="decrement" class="counter-btn">-</button>
+              <h2 id="value">1</h2>
+              <button id="increment" class="counter-btn active-counter">
+                +
+              </button>
+            </div>
+          </div>
+          <div style="display: inline-block">
+            <h4>
+              <span class="description">Total:</span>
+              <span class="total-price">$15</span>
+            </h4>
+          </div>
+
+          <div class="row">
+            <span class="validation-message">
+              You have reached the maximum number of devices
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row padding-right-0 padding-left-0">
+        <div
+          class="columns small-12 medium-6 large-5 small-centered medium-centered large-centered text-center"
+        >
+          <a class="button button-primary" href="#">Confirm</a>
+        </div>
+      </div>
+
+      <div class="row margin-top-2 text-center">
+        <div
+          class="columns small-12 medium-12 large-12 small-centered medium-centered large-centered"
+        >
+          <a class="normal-link" href="#"
+            ><h4 class="label-color">Cancel</h4></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const decrementBtn = document.getElementById("decrement");
+  const incrementBtn = document.getElementById("increment");
+  const valueDisplay = document.getElementById("value");
+
+  let value = 1;
+
+  const updateDecrementButton = () => {
+    if (value > 1) {
+      decrementBtn.classList.add("active-counter");
+    } else {
+      decrementBtn.classList.remove("active-counter");
+    }
+  };
+
+  decrementBtn.addEventListener("click", () => {
+    if (value > 1) {
+      value--;
+      valueDisplay.textContent = value;
+      updateDecrementButton();
+    }
+  });
+
+  incrementBtn.addEventListener("click", () => {
+    value++;
+    valueDisplay.textContent = value;
+    updateDecrementButton();
+  });
+
+  // Initialize the button state
+  updateDecrementButton();
+</script>

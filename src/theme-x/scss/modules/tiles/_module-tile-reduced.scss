@@ -1,0 +1,29 @@
+@use "../../settings/settings-x" as *;
+.module-tile-reduced {
+  border: $module-tile-border-color;
+  min-height: 114px;
+  padding-top: rem-calc(5px);
+  padding-right: rem-calc(45px);
+  padding-left: rem-calc(45px);
+  padding-bottom: rem-calc(20px);
+
+  &.selected {
+    border: $module-tile-border-color-selected;
+    background: $module-tile-border-background-selected;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding-top: rem-calc(15px);
+    padding-bottom: rem-calc(20px);
+    color: $module-tile-header-font-color;
+  }
+
+  strong {
+    color: $module-tile-price-font-color;
+  }
+}

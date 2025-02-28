@@ -1,0 +1,258 @@
+/* url paths */
+$PATH-ASSETS: "../";
+$PATH-ASSETS-IMG: $PATH-ASSETS + "img/";
+$PATH-ASSETS-FONTS: $PATH-ASSETS + "fonts/";
+$PATH-ASSETS-LOGO: $PATH-ASSETS-IMG + "logo/";
+$PATH-ASSET-ICON: $PATH-ASSETS-IMG + "icons/";
+$PATH-ASSET-SOCIAL: $PATH-ASSETS-IMG + "social/";
+$PATH-ASSET-BACK: $PATH-ASSETS-IMG + "back/";
+
+// Global
+// ---------
+
+$global-font-size: 100%;
+$global-width: rem-calc(1200px);
+$global-lineheight: 1.5;
+$global-padding: 0.5rem;
+$global-margin: 0.5rem;
+
+$font-family-pageheader: "VVDisplay";
+$font-family-header: "VVCentraB", "GreycliffCF", "Helvetica Neue", Helvetica,
+  Roboto, Arial, sans-serif;
+$font-family-body: "VVCentra", "Avenir", "Praxis-LT", "Helvetica Neue",
+  Helvetica, Roboto, Arial, sans-serif;
+$font-family-thin: "VVCentraL";
+
+$max-width: rem-calc(1440px);
+
+// Breakpoints
+// --------------
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 970px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium large);
+
+// The Grid
+// -----------
+
+$grid-row-width: $global-width;
+$grid-column-count: 12;
+$grid-column-gutter: (
+  small: 20px,
+  medium: 30px,
+);
+$grid-column-align-edge: true;
+$grid-column-alias: "columns";
+$block-grid-max: 8;
+
+// Base Typography
+// ---------------
+
+/**
+ * Font Size Headlines
+ */
+
+$font-size-headline-h1: 32px;
+$font-size-headline-h2: 24px;
+$font-size-headline-h3: 19px;
+$font-size-headline-h4: 16px;
+$font-size-headline-h5: 14px;
+$font-size-headline-h6: 13px;
+
+/**
+* Font Size Headlines Mobile
+*/
+
+$font-size-headline-h1-mobile: 32px;
+$font-size-headline-h2-mobile: 24px;
+$font-size-headline-h3-mobile: 19px;
+$font-size-headline-h4-mobile: 16px;
+$font-size-headline-h5-mobile: 14px;
+$font-size-headline-h6-mobile: 13px;
+
+/**
+ * Font Size Body
+ */
+
+$font-size-body: 16px;
+
+/**
+* Font Size Body Mobile
+*/
+
+$font-size-body-mobile: 14px;
+
+/**
+* Font Weights
+*/
+
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-weight-extralight: 200;
+
+$header-styles: (
+  small: (
+    "h1": (
+      "font-size": $font-size-headline-h1-mobile,
+    ),
+    "h2": (
+      "font-size": $font-size-headline-h2-mobile,
+    ),
+    "h3": (
+      "font-size": $font-size-headline-h3-mobile,
+    ),
+    "h4": (
+      "font-size": $font-size-headline-h4-mobile,
+    ),
+    "h5": (
+      "font-size": $font-size-headline-h5-mobile,
+    ),
+    "h6": (
+      "font-size": $font-size-headline-h6-mobile,
+    ),
+  ),
+  medium: (
+    "h1": (
+      "font-size": $font-size-headline-h1,
+    ),
+    "h2": (
+      "font-size": $font-size-headline-h2,
+    ),
+    "h3": (
+      "font-size": $font-size-headline-h3,
+    ),
+    "h4": (
+      "font-size": $font-size-headline-h4,
+    ),
+    "h5": (
+      "font-size": $font-size-headline-h5,
+    ),
+    "h6": (
+      "font-size": $font-size-headline-h6,
+    ),
+  ),
+);
+
+$body-styles: (
+  small: (
+    "body": (
+      "font-size": $font-size-body-mobile,
+    ),
+  ),
+  medium: (
+    "body": (
+      "font-size": $font-size-body,
+    ),
+  ),
+);
+
+// Color Settings
+// --------------
+
+$color-gold: #bc8a2a;
+$color-blue-dark: #083c5d;
+$color-teal: #169dbe;
+$color-teal-light: #edf8fa;
+$color-blue-medium: #0079bc;
+$color-blue-light: #b5d8e5;
+$color-green: #37a867;
+$color-dark-grey: #78899e;
+$color-grey: #d0d7de;
+$color-light-grey: #919090;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-dark: #253b56;
+$color-green: #2f798a;
+$color-red: #ff0000;
+$color-red-dark: #cc0000;
+$color-brown-dark: #191919;
+$bg-color-banner: #eaeef1;
+$homepage-bg-color: #410b55;
+$color-label: #4a4a4a;
+$description-color: #6e6e6e;
+// palette
+$color-primary: $color-black;
+$color-secondary: $color-red-dark;
+$color-accent: $color-dark-grey;
+
+$box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.5);
+
+$font-color-body: $color-black;
+$font-color-headline: $color-black;
+
+// link colors
+$link-color-normal: $color-primary;
+$link-color-hover: $color-primary;
+$link-color-visited: $color-primary;
+$link-color-focus: $color-primary;
+
+/**
+Buttons
+ */
+
+$button-color: $color-white;
+$button-font-family: $font-family-header;
+$button-radius: 0;
+$button-background: $color-blue-medium;
+$button-font-color-visited: $color-white;
+
+// Module Settings
+// ---------------
+
+// Module Header
+$module-header-height: 85px;
+$module-header-height-mobile: 85px;
+$page-title-spacing-top-mobile: 36px;
+
+// Module Logo
+$logo-height: 70px;
+$logo-height-mobile: 70px;
+$logo-smallscale-name: "VV_Logo_RGB_Smallscale";
+$module-logo-height: 100px;
+$module-logo-height-mobile: 100px;
+$module-logo-complete-height: 100px;
+$module-logo-complete-height-mobile: 100px;
+$module-logo-space-to-top: -18px;
+$module-logo-space-to-top-mobile: -10px;
+$module-logo-complete-space-to-top: 21px;
+$module-logo-complete-space-to-top-mobile: 8px;
+$module-back-button-height: 28px;
+$module-back-button-width: 28px;
+$module-back-button-space-to-top: 32px;
+$module-logo-name: "VV_Logo_RGB_Standard";
+$module-logo-complete-name: "VV_Logo_RGB_Standard";
+$module-back-button-name: "icoBack.png";
+$app-store-download-logo: "app-store-logo";
+$homescreen-image-name: "homescreen_img";
+$homescreen-image-height: 368px;
+$app-store-logo-height: 40px;
+$app-store-logo-height-mobile: 40px;
+$google-play-store-download-logo: "google-play-store-logo";
+$google-play-store-logo-height: 40px;
+$google-play-store-logo-height-mobile: 40px;
+
+// Module Tile
+
+$module-tile-border-color: 1px solid $color-primary;
+$module-tile-border-color-selected: 1px solid $color-red;
+$module-tile-icon-color: $color-primary;
+$module-tile-icon-color-selected: $color-accent;
+
+$module-tile-border-background-selected: $color-white;
+$module-tile-header-background: $color-white;
+
+$module-tile-header-font-color: $color-primary;
+$module-tile-header-font-color-selected: $color-accent;
+$module-tile-price-font-color: $color-primary;
+
+// Social media icons
+$social-media-size: 80px;

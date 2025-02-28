@@ -1,0 +1,514 @@
+@import "../settings/settings-x";
+@import "foundation-sites/scss/util/breakpoint";
+
+@font-face {
+  font-family: "VVCentra";
+  src: url("../fonts/VVCentra2-Medium.eot") format("eot");
+  src: url("../fonts/VVCentra2-Medium.eot?#iefix") format("eot"),
+    url("../fonts/VVCentra2-Medium.woff2") format("woff2"),
+    url("../fonts/VVCentra2-Medium.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "VVDisplay";
+  src: url("../fonts/Voyages-Display_v2.eot") format("eot");
+  src: url("../fonts/Voyages-Display_v2.eot?#iefix") format("eot"),
+    url("../fonts/Voyages-Display_v2.woff2") format("woff2"),
+    url("../fonts/Voyages-Display_v2.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "VVCentraB";
+  size-adjust: 108%;
+  src: url("../fonts/VVCentra2-Bold.eot");
+  src: url("../fonts/VVCentra2-Bold.eot?#iefix") format("eot"),
+    url("../fonts/VVCentra2-Bold.woff2") format("woff2"),
+    url("../fonts/VVCentra2-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "VVCentraH";
+  src: url("../fonts/Voyages-Headline-v2.eot") format("eot");
+  src: url("../fonts/Voyages-Headline-v2.eot?#iefix") format("eot"),
+    url("../fonts/Voyages-Headline-v2.woff2") format("woff2"),
+    url("../fonts/Voyages-Headline-v2.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "VVCentraT";
+  src: url("../fonts/VVCentra2-Thin.eot") format("eot");
+  src: url("../fonts/VVCentra2-Thin.eot?#iefix") format("eot"),
+    url("../fonts/VVCentra2-Thin.woff2") format("woff2"),
+    url("../fonts/VVCentra2-Thin.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "VVCentraL";
+  src: url("../fonts/VVCentra2-Light.eot") format("eot");
+  src: url("../fonts/VVCentra2-Light.eot?#iefix") format("eot"),
+    url("../fonts/VVCentra2-Light.woff2") format("woff2"),
+    url("../fonts/VVCentra2-Light.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GreycliffCF";
+  src: url("../fonts/GreycliffCF-Medium.eot");
+  src: url("../fonts/GreycliffCF-Medium.eot?#iefix") format("eot"),
+    url("../fonts/GreycliffCF-Medium.woff2") format("woff2"),
+    url("../fonts/GreycliffCF-Medium.woff") format("woff"),
+    url("../fonts/GreycliffCF-Medium.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "VVBook";
+  src: url("../fonts/VVCentra2-Book.eot") format("eot");
+  src: url("../fonts/VVCentra2-Book.eot?#iefix") format("eot"),
+    url("../fonts/VVCentra2-Book.woff2") format("woff2"),
+    url("../fonts/VVCentra2-Book.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GreycliffCFCF";
+  src: url("../fonts/GreycliffCF-Bold.eot");
+  src: url("../fonts/GreycliffCF-Bold.eot?#iefix") format("eot"),
+    url("../fonts/GreycliffCF-Bold.woff2") format("woff2"),
+    url("../fonts/GreycliffCF-Bold.woff") format("woff"),
+    url("../fonts/GreycliffCF-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/AvenirLTStd-Roman.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GreycliffCF";
+  src: url("../fonts/GreycliffCF-Medium.eot");
+  src: url("../fonts/GreycliffCF-Medium.eot?#iefix") format("eot"),
+    url("../fonts/GreycliffCF-Medium.woff2") format("woff2"),
+    url("../fonts/GreycliffCF-Medium.woff") format("woff"),
+    url("../fonts/GreycliffCF-Medium.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GreycliffCFCF";
+  src: url("../fonts/GreycliffCF-Bold.eot");
+  src: url("../fonts/GreycliffCF-Bold.eot?#iefix") format("eot"),
+    url("../fonts/GreycliffCF-Bold.woff2") format("woff2"),
+    url("../fonts/GreycliffCF-Bold.woff") format("woff"),
+    url("../fonts/GreycliffCF-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Praxis-LT";
+  src: url("../fonts/PraxisLT-Regular.eot");
+  src: url("../fonts/PraxisLT-Regular.eot?#iefix") format("eot"),
+    url("../fonts/PraxisLT-Regular.woff2") format("woff2"),
+    url("../fonts/PraxisLT-Regular.woff") format("woff"),
+    url("../fonts/PraxisLT-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Praxis-LT";
+  src: url("../fonts/PraxisLT-SemiBold.eot");
+  src: url("../fonts/PraxisLT-SemiBold.eot?#iefix") format("eot"),
+    url("../fonts/PraxisLT-SemiBold.woff2") format("woff2"),
+    url("../fonts/PraxisLT-SemiBold.woff") format("woff"),
+    url("../fonts/PraxisLT-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  @extend .typeset-body;
+  color: $font-color-body;
+  font-family: $font-family-thin;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  color: $font-color-headline;
+}
+
+h1 {
+  font-family: $font-family-pageheader;
+  font-size: 36px;
+}
+
+h6 {
+  font-family: $font-family-thin;
+  text-transform: uppercase;
+}
+
+h1 {
+  @extend .typeset-h1;
+}
+
+h2 {
+  @extend .typeset-h2;
+}
+
+h3 {
+  @extend .typeset-h3;
+}
+
+h4 {
+  @extend .typeset-h4;
+}
+
+h5 {
+  @extend .typeset-h5;
+}
+
+h6 {
+  @extend .typeset-h6;
+}
+
+p {
+  @extend .typeset-body;
+  font-family: $font-family-thin;
+}
+
+b,
+strong {
+  font-weight: $font-weight-semibold;
+}
+
+a {
+  color: $color-black;
+  &:hover {
+    color: $color-red-dark;
+  }
+  &.normal-link {
+    text-decoration: underline !important;
+    color: $color-black;
+    &:hover {
+      color: $color-red-dark;
+    }
+  }
+  .for-dark-bg {
+    color: $color-white;
+  }
+}
+
+label {
+  @extend .typeset-body;
+  font-family: "VVBook";
+  font-size: 16px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  border: 1px solid gray;
+  box-shadow: none;
+  border-radius: 4px;
+  height: 56px;
+  padding-left: 15px;
+  // border-bottom: 2px solid #e0e0e0;
+  &::placeholder {
+    font-weight: 600;
+    color: gray;
+  }
+}
+
+select {
+  color: gray;
+  font-weight: 600;
+  padding-right: 30px;
+  position: relative;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: white
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20'><path stroke='grey' fill='grey' d='M6 8l-1 1l5 5l5-5l-1-1l-4 4l-4-4z'/></svg>")
+    no-repeat;
+  background-position: right 10px top 50%;
+}
+
+/* input[type="checkbox"] {
+  height: 16px;
+  width: 16px;
+  margin-top: 2px;
+} */
+
+.y-app {
+  margin-top: 50px;
+
+  @include breakpoint(medium up) {
+    display: none;
+  }
+}
+
+.dark-page-contents {
+  border-top: none;
+}
+
+.page-divider {
+  @include breakpoint(small down) {
+    max-width: 220px;
+  }
+}
+
+.error-dot {
+  height: 8px;
+  width: 8px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.input-with-error {
+  position: relative;
+  padding-left: rem-calc(18px) !important;
+  padding-right: rem-calc(18px) !important;
+
+  @include breakpoint(small down) {
+    width: 100%;
+  }
+}
+
+.registration-help-text {
+  font-size: 12px;
+  padding-left: 2px;
+}
+
+.validation-error {
+  position: absolute;
+  left: 5px;
+  color: $color-red;
+  display: inline;
+}
+
+.show-validation-error {
+  color: $color-red;
+  display: inline-block;
+}
+
+.voucher-top-separation {
+  margin-bottom: 4rem;
+}
+
+.languages-label {
+  color: $color-primary;
+}
+
+.languages-icon {
+  margin-left: 5px;
+  color: $color-primary;
+}
+
+.button-text {
+  color: $color-blue-light !important;
+}
+
+.access-internet-logo {
+  width: $social-media-size;
+  height: $social-media-size;
+  margin: 0 auto;
+  padding-top: 15px;
+  background: url($PATH-ASSETS-IMG + "internet_access/voom-blue-logo.png")
+    no-repeat;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.use-app-logo {
+  width: 40px;
+  height: 80px;
+  margin: 0 auto;
+  padding-top: 15px;
+  background: url($PATH-ASSETS-IMG + "app_logo/rci_logo_color.png") no-repeat;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.mobile-only {
+  display: none;
+
+  @include breakpoint(small down) {
+    display: block;
+  }
+}
+
+.promo-wifi-video {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  video {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include breakpoint(small down) {
+    width: 90%;
+  }
+}
+
+.wifi-video-link {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  margin: 10% auto;
+  width: 60%;
+
+  @include breakpoint(medium down) {
+    margin: 20% auto;
+  }
+
+  @include breakpoint(small down) {
+    margin: 80% auto;
+    width: 95%;
+  }
+}
+
+.page-contents {
+  min-height: calc(100vh - 294px);
+
+  @include breakpoint(medium down) {
+    min-height: calc(100vh - 262px);
+  }
+
+  @include breakpoint(small down) {
+    min-height: calc(100vh - 240px);
+  }
+}
+
+.close {
+  color: $color-primary;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.price-table {
+  width: 20%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include breakpoint(medium down) {
+    width: 40%;
+  }
+
+  @include breakpoint(small down) {
+    width: 80%;
+  }
+}
+
+.modal-box-contents {
+  @include margin-direction("top", 25);
+
+  .modal-box-buttons {
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include breakpoint(small down) {
+    .modal-box-buttons {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader-spinner {
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cabin-dummy-label {
+  @include breakpoint(medium down) {
+    display: none;
+  }
+}
+
+.connected-image {
+  background: url($PATH-ASSETS-IMG + "connected/PremiumVoyagePass.png")
+    no-repeat;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 250px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

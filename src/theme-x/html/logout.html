@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>iCafe</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <script type="text/javascript" src="scripts/libs/jquery/jquery.js"></script>
+    <script type="text/javascript" src="scripts/functions.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <form class="bg-register" method="post" action="./logout.aspx" id="mainForm">
+
+        <!-- HEADER -->
+
+        <div class="module-header margin-bottom-1">
+            <div class="columns medium-offset-1 small-3 medium-3" id="wrapper-back" style="visibility: hidden;">
+                <a class="icon icon-arrow" href="#"></a>
+            </div>
+
+            <div class="columns small-6 medium-4" id="wrapper-logo">
+                <div class="module-logo"></div>
+            </div>
+
+            <div class="columns medium-pull-1 small-3 medium-4" id="wrapper-login" style="visibility: hidden;">
+                <button id="languages_button" type="button" onclick="handleLanguageClick(event)">
+                    <span class="languages-label">English</span><span class="icon icon-globe languages-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!-- /HEADER -->
+
+        <!-- MAIN CONTENT AREA - WITH BG -->
+
+        <div class="page-contents">
+
+            <div class="row">
+                <div class="columns small-12 medium-10 large-10 small-centered medium-centered large-centered">
+
+                    <div class="row padding-bottom-3 padding-top-3">
+                        <div class="columns small-12 text-center">
+                            <h1 class="margin-bottom-2">You've Been Disconnected</h1>
+                            <p>Log back in to activate your satellite internet or purchase a plan</p>
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <div class="row">
+                            <div
+                                class="columns small-12 medium-6 large-5 small-centered medium-centered large-centered">
+                                <div class="input-set padding-left-1 padding-right-1">
+                                    <input type="text" placeholder="Username" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div
+                                class="columns small-12 medium-6 large-5 small-centered medium-centered large-centered">
+                                <div class="input-set padding-left-1 padding-right-1">
+                                    <input type="password" class="folio" placeholder="PIN" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div
+                                class="columns small-12 medium-6 large-5 small-centered medium-centered large-centered margin-bottom-1 text-center margin-top-1">
+                                <input type="submit" value="Login" class="button button-primary" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div
+                                class="columns small-10 medium-6 large-5 small-centered medium-centered large-centered margin-bottom-1 text-center margin-top-1">
+                                <p>Forgot your PIN number? Please visit the Crew Office for assistance.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <input type="hidden" name="form" value="PanelLogin" />
+
+                    <div class="row bg-register">
+                        <div
+                            class="columns small-12 medium-7 large-6 small-centered medium-centered large-centered margin-bottom-3 margin-top-3">
+                            <table class="stack bg-register">
+                                <thead class="bg-register">
+                                    <tr class="uppercase">
+                                        <th class="device">
+                                            Device:
+                                        </th>
+                                        <th class="plan">
+                                            Plan:
+                                        </th>
+                                        <th class="date">
+                                            Usage:
+                                        </th>
+                                        <th class="price">
+                                            Remaining:
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-register">
+                                        <td data-th="Device:">
+                                            iOS 11.0 device
+                                        </td>
+                                        <td data-th="Plan:">
+                                            Social One Day Plan (1 Device)
+                                        </td>
+                                        <td data-th="Usage:">
+                                            Logged In:
+                                            Nov 14 @ 9:29 <br />
+                                            Logged Out:
+                                            Nov 14 @ 9:30
+
+                                            <br />
+
+                                            <div class="" style="display:none;">
+                                                Logged In:
+                                                Nov 14 @ 9:27 <br />
+                                                Logged Out:
+                                                Nov 14 @ 9:28
+
+                                                <br />
+                                                Logged In:
+                                                Nov 13 @ 11:15 <br />
+                                                Logged Out:
+                                                Nov 13 @ 11:15
+
+                                                <br />
+                                                Logged In:
+                                                Nov 13 @ 10:43 <br />
+                                                Logged Out:
+                                                Nov 13 @ 11:09
+
+                                                <br />
+
+                                            </div>
+
+                                        </td>
+                                        <td data-th="Remaining:">
+                                            13 Hours 12 Minutes
+                                        </td>
+                                    </tr>
+
+                                    <tr class="bg-register">
+                                        <td data-th="Device:">
+                                            Windows 7 device
+
+                                        </td>
+                                        <td data-th="Plan:">
+                                            Social One Day
+                                        </td>
+                                        <td data-th="Usage:">
+
+                                            Logged In:
+                                            Okt 23 @ 2:16 <br />
+                                            Logged Out:
+                                            Okt 23 @ 2:20
+
+                                            <br />
+
+                                            <div class="panel-all-user-sessions" style="display:none;">
+                                                Logged In:
+                                                Okt 23 @ 2:06 <br />
+                                                Logged Out:
+                                                Okt 23 @ 2:07
+
+                                                <br />
+
+                                            </div>
+
+                                        </td>
+                                        <td data-th="Remaining:">
+
+                                            Expired
+
+                                        </td>
+                                    </tr>
+
+                                    <tr class="bg-register">
+                                        <td data-th="Device:">
+                                            Windows 7 device
+
+                                        </td>
+                                        <td data-th="Plan:">
+                                            Social One Day
+                                        </td>
+                                        <td data-th="Usage:">
+
+                                            Logged In:
+                                            Okt 23 @ 10:24 <br />
+                                            Logged Out:
+                                            Okt 23 @ 11:25
+
+                                            <br />
+
+                                        </td>
+                                        <td data-th="Remaining:">
+
+                                            Expired
+
+                                        </td>
+                                    </tr>
+
+                                    <tr class="bg-register">
+                                        <td data-th="Device:">
+                                            Windows 7 device
+
+                                        </td>
+                                        <td data-th="Plan:">
+                                            Upgrade - Surf One Day to Surf Voyage
+                                        </td>
+                                        <td data-th="Usage:">
+
+                                            Logged In:
+                                            Dez 15 @ 5:01 <br />
+                                            Logged Out:
+                                            Dez 18 @ 3:44
+
+                                            <br />
+
+                                            <div class="panel-all-user-sessions" style="display:none;">
+                                                Logged In:
+                                                Dez 14 @ 5:30 <br />
+                                                Logged Out:
+                                                Dez 18 @ 3:44
+
+                                                <br />
+
+                                            </div>
+
+                                        </td>
+                                        <td data-th="Remaining:">
+
+
+
+                                        </td>
+                                    </tr>
+
+                                    <tr class="bg-register">
+                                        <td data-th="Device:">
+                                            Windows 7 device
+
+                                        </td>
+                                        <td data-th="Plan:">
+                                            Upgrade - Social One Day to Surf One Day
+                                        </td>
+                                        <td data-th="Usage:">
+
+                                            Logged In:
+                                            Dez 14 @ 5:29 <br />
+                                            Logged Out:
+                                            Dez 18 @ 3:44
+
+                                            <br />
+
+                                        </td>
+                                        <td data-th="Remaining:">
+
+                                            Expired
+
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div class="row margin-bottom-3">
+                        <div class="columns small-12 medium-6 large-5 small-centered medium-centered large-centered">
+                            <div class="toggle-panel-all-user-sessions" style="cursor:pointer;">
+                                <span class="panel-all-user-sessions-text">Show</span>
+                                <span class="panel-all-user-sessions-text" style="display:none;">Hide</span>
+                                All Usage
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row y-app margin-bottom-1">
+                <div class="columns small-8 small-offset-2 small-centered medium-centered large-centered text-center">
+                    <h4 class="">Download the x y Line Navigator App</h4>
+                </div>
+                <div class="row padding-bottom-3">
+                    <div class="columns small-12 medium-4 large-4 small-centered medium-centered large-centered">
+                        <div class="column large-6">
+                            <div class="google-play-store-logo"></div>
+                        </div>
+                        <div class="column large-6">
+                            <div class="app-store-logo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /MAIN CONTENT AREA -->
+
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".toggle-panel-all-user-sessions").click(function () {
+                    $(".panel-all-user-sessions").slideToggle();
+                    $(".panel-all-user-sessions-text").toggle();
+                });
+            });
+        </script>
+
+
+    </form>
+
+    <script src="assets/js/bundle.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+@@include('header.html')
+
+<div class="page-contents">
+  <div class="banner text-center margin-bottom-3">
+    <div class="row">
+      <h2>Enter your secret code</h2>
+    </div>
+  </div>
+
+  <div class="row margin-top-3">
+    <div
+      class="column small-12 medium-8 large-7 small-centered medium-centered large-centered padding-horizontal-3 margin-top-3"
+    >
+      <div class="form-floating-label">
+        <input type="text" class="floating-input" id="voucher-code" required />
+        <label for="voucher-code">Enter your code</label>
+      </div>
+      <span id="voucher-validation-error" class="validation-message">
+        You have entered an incorrect secret code. Please double-check and try
+        again.
+      </span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div
+      class="column small-12 medium-8 large-7 small-centered medium-centered large-centered padding-horizontal-3 text-center margin-top-3"
+    >
+      <a class="button button-primary-49" id="confirm-btn" href="#">Confirm</a>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  // Select all input and textarea elements within .form-floating-label
+  const inputs = document.querySelectorAll(".form-floating-label input");
+
+  // Add focusin event listener to all selected elements
+  inputs.forEach((input) => {
+    input.addEventListener("focus", () => {
+      input.parentElement.classList.add("has-value");
+    });
+
+    // Add blur event listener to handle removing the class
+    input.addEventListener("blur", () => {
+      if (!input.value.trim()) {
+        input.parentElement.classList.remove("has-value");
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const confirmButton = document.getElementById("confirm-btn");
+    const voucherInput = document.getElementById("voucher-code");
+    const errorMessage = document.getElementById("voucher-validation-error");
+
+    confirmButton.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default action of the anchor tag
+
+      const enteredCode = voucherInput.value.trim();
+
+      if (enteredCode === "") {
+        errorMessage.textContent = "Please enter your secret code.";
+        errorMessage.style.visibility = "visible";
+        voucherInput.classList.add("error");
+      } else if (enteredCode !== "expectedCode") {
+        errorMessage.textContent =
+          "You have entered an incorrect secret code. Please double-check and try again.";
+        errorMessage.style.visibility = "visible";
+        voucherInput.classList.add("error");
+      } else {
+        errorMessage.style.visibility = "hidden";
+        voucherInput.classList.remove("error");
+        // Replace with actual form submission or validation logic
+      }
+    });
+  });
+</script>

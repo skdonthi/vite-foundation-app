@@ -1,0 +1,66 @@
+@use "../settings/settings-x" as *;
+@import "foundation-sites/scss/util/util";
+@import "foundation-sites/scss/global";
+
+@mixin mx-typeset($font-family, $style, $type) {
+  font-family: $font-family;
+  font-size: #{map-get(map-get(map-get($style, "small"), $type), "font-size")}rem;
+
+  @include breakpoint(medium) {
+    font-size: #{map-get(map-get(map-get($style, "medium"), $type), "font-size")}rem;
+  }
+}
+
+.typeset-h1 {
+  @include mx-typeset($font-family-header, $header-styles, "h1");
+  font-weight: $font-weight-medium;
+  //letter-spacing: rem-calc(1px);
+}
+
+.typeset-h2 {
+  @include mx-typeset($font-family-header, $header-styles, "h2");
+  font-weight: $font-weight-bold;
+  //letter-spacing: rem-calc(1px);
+}
+
+.typeset-h3 {
+  @include mx-typeset($font-family-header, $header-styles, "h3");
+  font-weight: $font-weight-medium;
+  //letter-spacing: rem-calc(1px);
+}
+
+.typeset-h4 {
+  @include mx-typeset($font-family-body, $header-styles, "h4");
+  font-weight: $font-weight-regular;
+  //letter-spacing: rem-calc(1px);
+}
+
+.typeset-h5 {
+  @include mx-typeset($font-family-header, $header-styles, "h5");
+  font-weight: $font-weight-medium;
+  //letter-spacing: rem-calc(1px);
+}
+
+.typeset-h6 {
+  @include mx-typeset($font-family-header, $header-styles, "h6");
+  font-weight: $font-weight-medium;
+  //letter-spacing: rem-calc(1px);
+}
+
+.typeset-subtitle {
+  @include mx-typeset($font-family-header, $header-styles, "h6");
+  font-weight: $font-weight-medium;
+  letter-spacing: rem-calc(1px);
+  //text-transform: uppercase;
+}
+
+.typeset-button {
+  @include mx-typeset($font-family-body, $header-styles, "h6");
+  font-weight: $font-weight-medium;
+  //letter-spacing: rem-calc(1px);
+}
+
+.typeset-body {
+  @include mx-typeset($font-family-body, $body-styles, "body");
+  letter-spacing: rem-calc(0px);
+}

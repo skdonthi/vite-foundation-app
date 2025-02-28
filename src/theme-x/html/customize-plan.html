@@ -1,0 +1,168 @@
+@@include('header.html')
+
+<div class="page-contents">
+  <div class="small-12 page-title">
+    <div class="banner padding-bottom-1">
+      <div class="row text-center">
+        <h2>Your package is active</h2>
+      </div>
+
+      <div class="row">
+        <div class="columns small-12 medium-8 large-7 medium-centered large-centered padding-2">
+          <div class="active-package shadow border-radius-1 margin-bottom-1">
+            <div class="row">
+              <div class="column padding-3">
+                <div style="display: flex; justify-content: space-between" class="padding-horizontal-1">
+                  <div class="title">
+                    <h5>Premium</h5>
+                    <div class="sub-title">
+                      Faster internet with streaming & video calling
+                    </div>
+                    <div class="description margin-top-1">
+                      24 hours from Wed, 5:00pm
+                    </div>
+                  </div>
+                  <div class="expand-collapse">
+                    <span for="toggle" class="toggle-btn">
+                      <span class="arrow"></span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="description-expanded padding-horizontal-1">
+                  Enjoy faster connection speeds to browse websites with ease,
+                  stream video and music, and make video phone calls.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="active-package shadow border-radius-1">
+            <div class="row">
+              <div class="columns padding-left-3 padding-top-1 padding-bottom-2">
+                <div class="description padding-horizontal-1">
+                  [<span id="noOfDevicesPerPerson">2</span>] devices per person
+                  -
+                  <a class="normal-link label-color" href="#">
+                    <strong>Buy more</strong></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: center">
+            <div class="grid-x align-center align-middle margin-top-3">
+              <div class="cell shrink">
+                <a class="button button-primary go-to-internet-button padding-horizontal-3" href="#">
+                  Get me to the web
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="columns small-12 medium-8 large-7 medium-centered large-centered">
+        <h3 class="padding-left-2 padding-top-3">Upgrade</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="columns small-12 medium-8 large-7 medium-centered large-centered padding-horizontal-2">
+        <div class="module-tile-info shadow --medium">
+          <div class="row">
+            <div class="columns margin-horizontal-1 margin-vertical-3">
+              <div class="green-badge">Recommended</div>
+              <h3 class="padding-horizontal-1">Premium</h3>
+              <div class="sub-title padding-left-1 padding-right-3">
+                Faster internet with streaming & video calling
+              </div>
+              <div class="description padding-left-1 padding-right-3">
+                Enjoy faster connection speeds to browse websites with ease,
+                stream video and music, and make video phone calls.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns small-12 padding-horizontal-2">
+              <div class="columns small-6 margin-top-1">
+                <h4>Full voyage</h4>
+              </div>
+              <div class="columns small-4 small-offset-2">
+                <a class="button button-primary go-to-internet-button" href="#">$150</a>
+              </div>
+              <div class="columns small-12 medium-12 large-12 small-centered medium-centered large-centered">
+                <hr />
+              </div>
+            </div>
+
+            <div class="columns small-12 padding-horizontal-2">
+              <div class="columns small-6 margin-top-1">
+                <h4>24 hour pass</h4>
+              </div>
+              <div class="columns small-4 small-offset-2">
+                <a class="button button-primary go-to-internet-button" href="#">$50</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-tile-info shadow --medium">
+          <div class="row">
+            <div class="columns margin-horizontal-1 margin-vertical-3">
+              <div class="yellow-badge">Profossional</div>
+              <h3 class="padding-horizontal-1">Work from Sea</h3>
+              <div class="sub-title padding-left-1 padding-right-3">
+                Fastest internet with Virtual Meeting access and VPN
+              </div>
+              <div class="description padding-left-1 padding-right-3">
+                Enjoy our faster connection speeds, optimized for virtual
+                meetings and work tools like VPN. Stream videos and music, and
+                browse websites with ease.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns small-12 padding-horizontal-2">
+              <div class="columns small-6 margin-top-1">
+                <h4>Full voyage</h4>
+              </div>
+              <div class="columns small-4 small-offset-2">
+                <a class="button button-primary go-to-internet-button" href="#">$250</a>
+              </div>
+              <div class="columns small-12 medium-12 large-12 small-centered medium-centered large-centered">
+                <hr />
+              </div>
+            </div>
+
+            <div class="columns small-12 padding-horizontal-2">
+              <div class="columns small-6 margin-top-1">
+                <h4>24 hour pass</h4>
+              </div>
+              <div class="columns small-4 small-offset-2">
+                <a class="button button-primary go-to-internet-button" href="#">$100</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row margin-vertical-3">
+          <div class="columns small-12 text-center padding-left-0 padding-right-0">
+            <a class="normal-link" href="#">
+              <h4 class="label-color">Have a secret code?</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--@@include('footer.html')-->
+</div>
+<script>
+  document.querySelector(".toggle-btn").addEventListener("click", function () {
+    this.classList.toggle("active");
+    document.querySelector(".description-expanded").classList.toggle("show");
+  });
+</script>

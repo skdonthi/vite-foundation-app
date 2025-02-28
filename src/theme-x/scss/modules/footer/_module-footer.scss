@@ -1,0 +1,34 @@
+/*
+Page footer
+ */
+footer {
+  background-color: $color-brown-dark;
+  color: white;
+  a {
+    color: white;
+  }
+  font-size: 14px;
+  .main-footer {
+    // border-bottom: 1px solid $color-grey;
+    font-size: 16px;
+  }
+
+  .menu a.button {
+    @include breakpoint(medium down) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .copyright {
+    color: $color-light-grey;
+  }
+
+  @include breakpoint(small down) {
+    font-size: 12px;
+
+    .menu a {
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
+}

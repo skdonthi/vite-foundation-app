@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>iCafe</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <script type="text/javascript" src="scripts/libs/jquery/jquery.js"></script>
+    <script type="text/javascript" src="scripts/functions.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body>
+    <form
+      class="bg-login"
+      method="post"
+      action="./PlanSelection.aspx"
+      id="mainForm"
+    >
+      <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms["mainForm"];
+        if (!theForm) {
+          theForm = document.mainForm;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+          if (!theForm.onsubmit || theForm.onsubmit() != false) {
+            theForm.__EVENTTARGET.value = eventTarget;
+            theForm.__EVENTARGUMENT.value = eventArgument;
+            theForm.submit();
+          }
+        }
+        //]]>
+      </script>
+
+      <script type="text/javascript">
+        //<![CDATA[
+        if (typeof Sys === "undefined")
+          throw new Error("ASP.NET Ajax client-side framework failed to load.");
+        //]]>
+      </script>
+      <!-- HEADER -->
+
+      <div class="module-header small-centered medium-centered large-centered">
+        <div class="row">
+          <div
+            class="columns small-12 medium-8 large-7 medium-centered large-centered"
+          >
+            <div class="columns small-2 medium-1 large-1">
+              <div id="wrapper-back">
+                <a href="#"><div></div></a>
+              </div>
+            </div>
+            <div class="columns small-7 medium-10 large-10">
+              <div id="wrapper-logo" class="logo"></div>
+            </div>
+            <div
+              class="columns small-1 small-pull-2 medium-1 medium-pull-1 large-1 large-pull-1"
+            >
+              <div id="wrapper-login">
+                <a class="normal-link" href="#">
+                  <h4 class="label-color">Log out</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="module-header margin-bottom-1">
+            <div class="row">
+                <div class="columns medium-offset-1 small-3 medium-3" id="wrapper-back">
+                    <a href="#"><div></div></a>
+                </div>
+
+                <div class="columns small-6 medium-4" id="wrapper-logo">
+                    <div class="module-logo"></div>
+                </div>
+                <div class="columns medium-pull-1 small-3 medium-4" id="wrapper-login" style="visibility: hidden;">
+                    <button id="languages_button" type="button" onclick="handleLanguageClick(event)">
+                        <span class="languages-label">English</span><span class="icon icon-globe languages-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div> -->
+      <!-- /HEADER -->
+
+      <!-- MAIN CONTENT AREA  -->
+      <div class="page-contents">
+        <div class="row">
+          <div class="columns small-12 medium-10 large-10 small-centered">
+            <!--pnlLogin-->
+            <div class="row">
+              <div
+                class="columns small-10 medium-6 large-5 margin-top-3 text-center small-centered medium-centered large-centered"
+              >
+                <h1 class="margin-bottom-1">Crew Login</h1>
+                <p>
+                  Connecting to satellite internet for the first time?
+                  <a class="for-dark-bg normal-link" href="">Register now!</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div
+                class="columns small-10 medium-6 large-5 small-offset-1 margin-bottom-1 small-centered medium-centered large-centered"
+              >
+                <p
+                  class="show-validation-error text-center"
+                  style="visibility: hidden"
+                >
+                  <span class="error-dot margin-right-1"></span>The credentials
+                  you entered are not correct
+                </p>
+              </div>
+            </div>
+
+            <div class="enumeration-wrapper"></div>
+
+            <div class="input-wrapper">
+              <div class="row">
+                <div
+                  class="columns small-12 medium-6 large-5 small-centered medium-centered large-centered"
+                >
+                  <div
+                    class="input-set input-with-error small-centered padding-left-1 padding-right-1"
+                  >
+                    <span class="validation-error" style="visibility: hidden"
+                      >*</span
+                    >
+                    <input type="text" placeholder="Username" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div
+                  class="columns small-12 medium-6 large-5 small-centered medium-centered large-centered"
+                >
+                  <div
+                    class="input-set input-with-error small-centered padding-left-1 padding-right-1"
+                  >
+                    <span class="validation-error" style="visibility: hidden"
+                      >*</span
+                    >
+                    <input type="password" class="folio" placeholder="PIN" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row button-row">
+                <div
+                  class="columns small-12 medium-6 large-5 small-centered margin-bottom-1 text-center margin-top-1 padding-left-2 padding-right-2"
+                >
+                  <input
+                    type="submit"
+                    value="Login"
+                    class="button button-primary"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="columns small-10 medium-6 large-5 small-centered margin-bottom-1 text-center margin-top-1"
+                >
+                  <p>
+                    Forgot your PIN number? Please visit the Crew Office for
+                    assistance.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="form" value="PanelLogin" />
+          </div>
+        </div>
+      </div>
+      <!-- /MAIN CONTENT AREA - WITHOUT BG -->
+    </form>
+
+    <script src="assets/js/bundle.js"></script>
+  </body>
+</html>

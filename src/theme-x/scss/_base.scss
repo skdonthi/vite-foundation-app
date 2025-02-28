@@ -1,0 +1,13 @@
+//import project settings
+@use "settings/sroot";
+
+//use foundation
+@use "../../../node_modules/foundation-sites/scss/foundation.scss";
+
+// include custom folders
+@use "mixins/mroot";
+@use "vendors/vroot";
+@use "modules/troot";
+@use "layouts/lroot";
+
+@include foundation-everything;

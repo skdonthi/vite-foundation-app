@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "x-iconfont";
+  src: url("../fonts/x-iconfont.eot");
+  src: url("../fonts/x-iconfont.eot?#iefix") format("eot"),
+    url("../fonts/x-iconfont.woff2") format("woff2"),
+    url("../fonts/x-iconfont.woff") format("woff"),
+    url("../fonts/x-iconfont.ttf") format("truetype"),
+    url("../fonts/x-iconfont.svg#x-iconfont") format("svg");
+}
+
+.icon:before {
+  font-family: "x-iconfont";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+}
+
+.icon-arrow:before {
+  content: "\E001";
+}
+
+.icon-browse:before {
+  content: "\E002";
+}
+
+.icon-connect:before {
+  content: "\E003";
+}
+
+.icon-globe:before {
+  content: "\E004";
+}
+
+.icon-letter:before {
+  content: "\E005";
+}
+
+.icon-multimedia:before {
+  content: "\E006";
+}
+
+.icon-next:before {
+  content: "\E007";
+}

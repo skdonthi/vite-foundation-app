@@ -1,0 +1,82 @@
+/*===================================
+=            Module Logo            =
+===================================*/
+@use "../../settings/settings-x" as *;
+@import "../../mixins/mixin-background-asset";
+@import "foundation-sites/scss/util/util";
+@import "foundation-sites/scss/global";
+@import "foundation-sites/scss/prototype/prototype";
+
+.homepage-image {
+  position: relative;
+  height: rem-calc($homescreen-image-height);
+  margin: 0 auto;
+  @include mx-background-asset($PATH-ASSETS-LOGO, $homescreen-image-name);
+  background-size: contain;
+}
+
+.logo {
+  position: relative;
+  height: rem-calc($logo-height);
+  margin: 0 auto;
+  @include mx-background-asset($PATH-ASSETS-LOGO, $logo-smallscale-name);
+  background-size: contain;
+  top: $module-logo-space-to-top;
+
+  @include breakpoint(small down) {
+    top: rem-calc($module-logo-space-to-top-mobile);
+    height: rem-calc($logo-height-mobile);
+  }
+}
+
+.module-logo {
+  position: relative;
+  height: rem-calc($module-logo-height);
+  margin: 0 auto;
+  @include mx-background-asset($PATH-ASSETS-LOGO, $module-logo-name);
+  background-size: contain;
+  top: $module-logo-space-to-top;
+
+  @include breakpoint(small down) {
+    top: rem-calc($module-logo-space-to-top-mobile);
+    height: rem-calc($module-logo-height-mobile);
+  }
+}
+
+.module-logo-complete {
+  position: relative;
+  height: rem-calc($module-logo-complete-height);
+  margin: 0 auto;
+  background: url($PATH-ASSETS-LOGO + "#{$module-logo-complete-name}.svg")
+    no-repeat;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: $module-logo-complete-space-to-top;
+
+  @include breakpoint(small down) {
+    top: rem-calc($module-logo-complete-space-to-top-mobile);
+    height: rem-calc($module-logo-complete-height-mobile);
+  }
+}
+
+.app-store-logo {
+  position: relative;
+  height: rem-calc($app-store-logo-height);
+  margin: 0 auto;
+  @include mx-background-asset($PATH-ASSETS-LOGO, $app-store-download-logo);
+  background-size: contain;
+}
+
+.google-play-store-logo {
+  position: relative;
+  height: rem-calc($google-play-store-logo-height);
+  margin: 0 auto;
+  @include mx-background-asset(
+    $PATH-ASSETS-LOGO,
+    $google-play-store-download-logo
+  );
+  background-size: contain;
+}
+
+/*=====  End of Module Logo  ======*/
